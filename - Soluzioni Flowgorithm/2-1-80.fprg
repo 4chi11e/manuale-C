@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-21 08:45:37 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjQwOjQ3ICI7Mjc2MQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjQ1OjM3ICI7MjsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.80 Leggi due numeri e poi comunica se questi numeri hanno lo stesso segno o se la loro somma &#232; negativa e contemporaneamente sono entrambi minori di 10."/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi il primo numero&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Scrivi il secondo numero&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="(a * b &gt; 0) or (a+b &lt; 0 and a &lt; 10 and b &lt; 10)">
+                <then>
+                    <output expression="&quot;s&#236;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;no&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

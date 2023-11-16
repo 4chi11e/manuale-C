@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-28 08:26:05 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA4OjE3OjI4ICI7Mjc3MQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA4OjI2OjA1ICI7MzsyODc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.48 - Calcolare il costo della bolletta telefonica sapendo&#13;&#10;che i primi 30 scatti costano 20 centesimi l&#8217;uno, gli scatti dal 31 al 100&#13;&#10;costano 15 centesimi l&#8217;uno, mentre gli ulteriori scatti costano 10 centesimi&#13;&#10;l&#8217;uno. Aggiungere infine una tassa fissa di 2,50&#8364; per le spese telefoniche. In&#13;&#10;input al programma &#232; dato il numero di scatti effettuati."/>
+            <declare name="scatti" type="Integer" array="False" size=""/>
+            <declare name="costo" type="Real" array="False" size=""/>
+            <assign variable="costo" expression="0"/>
+            <output expression="&quot;Scrivi il numero di scatti&quot;" newline="True"/>
+            <input variable="scatti"/>
+            <while expression="scatti &lt; 0">
+                <output expression="&quot;Il numero degli scatti non pu&#242; essere negativo. Scrivi il numero di scatti&quot;" newline="True"/>
+                <input variable="scatti"/>
+            </while>
+            <if expression="scatti &gt; 100">
+                <then>
+                    <assign variable="costo" expression="costo + (scatti-100) * 0.10"/>
+                    <assign variable="scatti" expression="100"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="scatti &gt; 30">
+                <then>
+                    <assign variable="costo" expression="costo + (scatti-30) * 0.15"/>
+                    <assign variable="scatti" expression="30"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="costo" expression="costo + scatti * 0.20 + 2.5"/>
+            <output expression="costo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

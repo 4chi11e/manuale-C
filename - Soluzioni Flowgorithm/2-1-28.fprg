@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-16 01:22:46 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTY7IjAxOjE1OjE3ICI7Mjc1Nw=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTY7IjAxOjIyOjQ2ICI7MTsyODY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.28 - Dato in&#13;&#10;input un numero intero n, stampa l&#8217;ennesimo numero della successione di&#13;&#10;fibonacci. La successione di fibonacci &#232; quella successione di numeri in cui&#13;&#10;ogni numero &#232; la somma dei due numeri precedenti. I primi due numeri sono 1 1.&#13;&#10;La successione inizia cos&#236;: 1 1 2 3 5 8 13 21 &#8230;"/>
+            <declare name="n, f, f1, f2, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi n&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="f" expression="1"/>
+            <assign variable="f2" expression="1"/>
+            <assign variable="f1" expression="1"/>
+            <for variable="i" start="2" end="n" direction="inc" step="1">
+                <assign variable="f" expression="f1 + f2"/>
+                <assign variable="f2" expression="f1"/>
+                <assign variable="f1" expression="f"/>
+            </for>
+            <output expression="&quot;f(&quot; &amp; n &amp; &quot;) = &quot; &amp; f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

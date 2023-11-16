@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-21 08:31:46 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjA3OjQ4ICI7Mjc2NQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjMxOjQ2ICI7NDsyODcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.33&#9;Dato in input un numero intero n, stampa la sua scomposizione in fattori primi"/>
+            <declare name="n, c, originale" type="Integer" array="False" size=""/>
+            <do expression="n &lt;= 1">
+                <output expression="&quot;Scrivi un numero maggiore di 1&quot;" newline="True"/>
+                <input variable="n"/>
+            </do>
+            <assign variable="originale" expression="n"/>
+            <assign variable="c" expression="2"/>
+            <while expression="n &gt; 1">
+                <while expression="n % c == 0">
+                    <output expression="c" newline="True"/>
+                    <assign variable="n" expression="n / c"/>
+                </while>
+                <assign variable="c" expression="c + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

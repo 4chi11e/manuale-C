@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-23 01:27:46 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjM7IjAxOjE1OjEzICI7Mjc1MQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjM7IjAxOjI3OjQ2ICI7MjsyODY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.41 - Data una sequenza di prezzi di prodotti, calcolare la&#13;&#10;spesa totale sapendo che se un prodotto costa meno di 100&#8364; lo devo scontare del&#13;&#10;10% altrimenti del 5%. Decidi tu il metodo per capire quando terminare la&#13;&#10;lettura della sequenza di prezzi."/>
+            <declare name="n, c" type="Integer" array="False" size=""/>
+            <declare name="prezzo, tot" type="Real" array="False" size=""/>
+            <output expression="&quot;Scrivi quanti prodotti ci sono&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="tot" expression="0"/>
+            <for variable="c" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Scrivi un prezzo&quot;" newline="True"/>
+                <input variable="prezzo"/>
+                <while expression="prezzo &lt; 0">
+                    <output expression="&quot;Il prezzo non pu&#242; essere negativo. Scrivi un prezzo&quot;" newline="True"/>
+                    <input variable="prezzo"/>
+                </while>
+                <if expression="prezzo &lt; 100">
+                    <then>
+                        <assign variable="prezzo" expression="0.9 * prezzo"/>
+                    </then>
+                    <else>
+                        <assign variable="prezzo" expression="0.95 * prezzo"/>
+                    </else>
+                </if>
+                <assign variable="tot" expression="tot + prezzo"/>
+            </for>
+            <output expression="tot" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

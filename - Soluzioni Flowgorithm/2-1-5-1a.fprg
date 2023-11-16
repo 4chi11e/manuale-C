@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-19 01:25:49 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMTk7IjAxOjIwOjQ4ICI7Mjc1OQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMTk7IjAxOjI1OjQ5ICI7MTsyODcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi un numero&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="c" expression="1"/>
+            <while expression="c &lt;= num">
+                <output expression="c" newline="True"/>
+                <assign variable="c" expression="c + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

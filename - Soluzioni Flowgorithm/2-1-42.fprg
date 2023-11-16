@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-23 01:38:24 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjM7IjAxOjMwOjI2ICI7Mjc1Mg=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjM7IjAxOjM4OjI0ICI7MjsyODY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.42 - Data una sequenza di 5 numeri che rappresentano i voti&#13;&#10;presi nelle diverse materie, stabilire se lo studente sar&#224; promosso, bocciato o&#13;&#10;rimandato a settembre. Lo studente &#232; promosso se non ha insufficienze, &#232;&#13;&#10;bocciato se ha almeno 3 insufficienze, altrimenti &#232; rimandato. Ricordati di&#13;&#10;controllare i valori dei voti in input che devono essere voti validi."/>
+            <declare name="nvoti, voto, ninsuff, i, soglia" type="Integer" array="False" size=""/>
+            <assign variable="nvoti" expression="5"/>
+            <assign variable="soglia" expression="3"/>
+            <assign variable="ninsuff" expression="0"/>
+            <for variable="i" start="0" end="nvoti-1" direction="inc" step="1">
+                <output expression="&quot;Scrivi il voto numero&quot; &amp; i+1" newline="True"/>
+                <input variable="voto"/>
+                <while expression="voto &lt; 1 or voto &gt; 10">
+                    <output expression="&quot;Voto non valido. Scrivi il voto numero&quot; &amp; i+1" newline="True"/>
+                    <input variable="voto"/>
+                </while>
+                <if expression="voto &lt; 6">
+                    <then>
+                        <assign variable="ninsuff" expression="ninsuff + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="ninsuff == 0">
+                <then>
+                    <output expression="&quot;Promosso&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="ninsuff &lt; 3">
+                        <then>
+                            <output expression="&quot;Rimandato&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Bocciato&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-02 01:57:52 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDI7IjAxOjQ3OjUyICI7Mjc1Nw=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDI7IjAxOjU3OjUyICI7MjsyODY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <do expression="n &lt; 1">
+                <output expression="&quot;Scrivi un numero positivo&quot;" newline="True"/>
+                <input variable="n"/>
+            </do>
+            <comment text="2.1.60 - Leggi un numero positivo e controlla se esso &#232; divisibile&#13;&#10;per 2 o divide 3 e non &#232; compreso tra 10 e 20"/>
+            <if expression="n % 2 == 0 or (3 % n == 0 and (n &lt; 10 or n &gt; 20))">
+                <then>
+                    <output expression="&quot;s&#236;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;no&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

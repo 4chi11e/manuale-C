@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-02 01:46:39 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDI7IjAxOjI5OjI5ICI7Mjc2MQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDI7IjAxOjQ2OjM5ICI7NDsyODcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.58 - Vengono dati in input i valori delle altezze di n&#13;&#10;persone (n chiesto all'utente). Per ogni persona oltre all'altezza viene&#13;&#10;indicato anche il sesso. Deve essere stampato il valore medio di altezza&#13;&#10;separatamente per i maschi e per le femmine. L&#8217;utente pu&#242; decidere di non&#13;&#10;indicare n&#233; maschio n&#233; femmina, in quel caso non contare quella persona."/>
+            <declare name="npersone, nmaschi, nfemmine, altezza, i, sesso" type="Integer" array="False" size=""/>
+            <declare name="mediamaschi, mediafemmine" type="Real" array="False" size=""/>
+            <output expression="&quot;Quante altezze vuoi inserire?&quot;" newline="True"/>
+            <input variable="npersone"/>
+            <assign variable="nmaschi" expression="0"/>
+            <assign variable="nfemmine" expression="0"/>
+            <assign variable="mediamaschi" expression="0"/>
+            <assign variable="mediafemmine" expression="0"/>
+            <for variable="i" start="0" end="npersone-1" direction="inc" step="1">
+                <output expression="&quot;Inserisci un'altezza in cm&quot;" newline="True"/>
+                <input variable="altezza"/>
+                <while expression="altezza &lt;= 0">
+                    <output expression="&quot;L'altezza deve essere positiva. Reinserisci&quot;" newline="True"/>
+                    <input variable="altezza"/>
+                </while>
+                <output expression="&quot;Scrivi se &#232; maschio (0) o femmina (1), se non vuoi indicarlo scrivi un altro numero&quot;" newline="True"/>
+                <input variable="sesso"/>
+                <if expression="sesso == 0">
+                    <then>
+                        <assign variable="mediamaschi" expression="mediamaschi + altezza"/>
+                        <assign variable="nmaschi" expression="nmaschi + 1"/>
+                    </then>
+                    <else>
+                        <if expression="sesso == 1">
+                            <then>
+                                <assign variable="mediafemmine" expression="mediafemmine + altezza"/>
+                                <assign variable="nfemmine" expression="nfemmine + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <if expression="nmaschi != 0">
+                <then>
+                    <assign variable="mediamaschi" expression="mediamaschi / nmaschi"/>
+                    <output expression="&quot;La media delle altezze dei maschi &#232; &quot; &amp; mediamaschi" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="nfemmine != 0">
+                <then>
+                    <assign variable="mediafemmine" expression="mediafemmine / nfemmine"/>
+                    <output expression="&quot;La media delle altezze delle femmine &#232; &quot; &amp; mediafemmine" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

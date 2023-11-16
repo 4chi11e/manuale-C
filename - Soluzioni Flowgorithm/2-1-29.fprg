@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-16 01:40:47 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTY7IjAxOjI2OjA0ICI7Mjc1NQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTY7IjAxOjQwOjQ3ICI7NDsyODY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.29 - Dato in&#13;&#10;input un numero intero, conta da quante cifre &#232; composto."/>
+            <declare name="n, ris, tmp" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi un numero&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n &lt; 0">
+                <then>
+                    <assign variable="tmp" expression="-n"/>
+                </then>
+                <else>
+                    <assign variable="tmp" expression="n"/>
+                </else>
+            </if>
+            <assign variable="ris" expression="1"/>
+            <while expression="tmp &gt;= 10">
+                <assign variable="tmp" expression="tmp / 10"/>
+                <assign variable="ris" expression="ris + 1"/>
+            </while>
+            <output expression="n &amp; &quot; &#232; formato da &quot; &amp; ris &amp; &quot; cifre&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

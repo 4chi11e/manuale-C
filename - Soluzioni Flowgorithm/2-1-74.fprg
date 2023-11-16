@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-09 01:58:07 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDk7IjAxOjQ4OjA0ICI7Mjc2Mg=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDk7IjAxOjU4OjA3ICI7NjsyODc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.74 - Data in input una sequenza di n numeri (n dato dall&#8217;utente), stampare per ognuno il numero di quadrati perfetti minori di quel numero"/>
+            <declare name="n, numero, i, base" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="3"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Scrivi un numero&quot;" newline="True"/>
+                <input variable="numero"/>
+                <assign variable="base" expression="1"/>
+                <while expression="base * base &lt; numero">
+                    <output expression="base * base" newline="True"/>
+                    <assign variable="base" expression="base + 1"/>
+                </while>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

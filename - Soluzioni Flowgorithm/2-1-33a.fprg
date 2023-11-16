@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-21 08:37:49 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjA3OjQ4ICI7Mjc2NQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjM3OjQ5ICI7MTA7MjkyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.33&#9;Dato in input un numero intero n, stampa la sua scomposizione in fattori primi"/>
+            <declare name="n, c, originale" type="Integer" array="False" size=""/>
+            <declare name="ris" type="String" array="False" size=""/>
+            <declare name="inizio" type="Boolean" array="False" size=""/>
+            <do expression="n &lt;= 1">
+                <output expression="&quot;Scrivi un numero maggiore di 1&quot;" newline="True"/>
+                <input variable="n"/>
+            </do>
+            <assign variable="originale" expression="n"/>
+            <assign variable="c" expression="2"/>
+            <assign variable="ris" expression="&quot;&quot;"/>
+            <assign variable="inizio" expression="true"/>
+            <while expression="n &gt; 1">
+                <while expression="n % c == 0">
+                    <if expression="inizio">
+                        <then>
+                            <assign variable="ris" expression="ris &amp; c"/>
+                            <assign variable="inizio" expression="false"/>
+                        </then>
+                        <else>
+                            <assign variable="ris" expression="ris &amp; &quot; x &quot; &amp; c"/>
+                        </else>
+                    </if>
+                    <assign variable="n" expression="n / c"/>
+                </while>
+                <assign variable="c" expression="c + 1"/>
+            </while>
+            <output expression="ris" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

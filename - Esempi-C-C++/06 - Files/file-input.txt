@@ -1,0 +1,4 @@
+Ciao a tutti, mi chiamo Francesco Tormene.
+Oggi vedremo come leggere da un file di testo.
+
+Riga finale del file.

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-14 11:24:07 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTQ7IjA4OjU5OjQ1ICI7Mjc3MQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTQ7IjA5OjA0OjI2ICI7MjsyODcw"/>
+        <attribute name="edited" value="ZnJhbmM7UEMtS0VLS087MjAyMy0wMi0xNDsiMTE6MjQ6MDcgIjszOzIzODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.24 - Dati in&#13;&#10;ingresso 4 numeri, che rappresentano gli orari in cui avvengono due diversi&#13;&#10;eventi della giornata, in modo che i primi 2 numeri siano ore e minuti del&#13;&#10;primo orario e gli altri 2 numeri siano ore e minuti del secondo orario,&#13;&#10;stabilire quale evento &#232; avvenuto prima. Inserisci dei controlli durante&#13;&#10;l&#8217;input in modo che le ore possano andare da 0 a 23 e i minuti da 0 a 59."/>
+            <declare name="h1, h2, m1, m2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi le ore del primo orario&quot;" newline="True"/>
+            <input variable="h1"/>
+            <while expression="h1 &lt; 0 || h1 &gt;= 24">
+                <output expression="&quot;le ore vanno da 0 a 23, reinserisci&quot;" newline="True"/>
+                <input variable="h1"/>
+            </while>
+            <output expression="&quot;Scrivi i minuti del primo orario&quot;" newline="True"/>
+            <input variable="m1"/>
+            <while expression="m1 &lt; 0 || m1 &gt;= 60">
+                <output expression="&quot;i minuti vanno da 0 a 59, reinserisci&quot;" newline="True"/>
+                <input variable="m1"/>
+            </while>
+            <output expression="&quot;Scrivi le ore del secondo orario&quot;" newline="True"/>
+            <input variable="h2"/>
+            <while expression="h2 &lt; 0 || h2 &gt;= 24">
+                <output expression="&quot;le ore vanno da 0 a 23, reinserisci&quot;" newline="True"/>
+                <input variable="h2"/>
+            </while>
+            <output expression="&quot;Scrivi i minuti del secondo orario&quot;" newline="True"/>
+            <input variable="m2"/>
+            <while expression="m2 &lt; 0 || m2 &gt;= 60">
+                <output expression="&quot;i minuti vanno da 0 a 59, reinserisci&quot;" newline="True"/>
+                <input variable="m2"/>
+            </while>
+            <if expression="h1 &lt; h2 || (h1 == h2 &amp;&amp; m1 &lt; m2)">
+                <then>
+                    <output expression="h1 &amp; &quot;:&quot; &amp; m1 &amp; &quot; viene prima di &quot; &amp; h2 &amp; &quot;:&quot; &amp; m2" newline="True"/>
+                </then>
+                <else>
+                    <if expression="h2 &lt; h1 || (h2 == h1 &amp;&amp; m2 &lt; m1)">
+                        <then>
+                            <output expression="h1 &amp; &quot;:&quot; &amp; m1 &amp; &quot; viene dopo di &quot; &amp; h2 &amp; &quot;:&quot; &amp; m2" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="h1 &amp; &quot;:&quot; &amp; m1 &amp; &quot; e &quot; &amp; h2 &amp; &quot;:&quot; &amp; m2 &amp; &quot; sono uguali&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-19 01:51:51 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMTk7IjAxOjQzOjU4ICI7Mjc2NQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMTk7IjAxOjUxOjUxICI7MTsyODY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.7 - Dato in input un numero n, stampa la prima potenza di 2 maggiore o uguale a n"/>
+            <declare name="n, pot" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi n&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="pot" expression="1"/>
+            <while expression="pot &lt; n">
+                <assign variable="pot" expression="pot * 2"/>
+            </while>
+            <output expression="pot" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

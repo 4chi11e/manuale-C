@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-24 08:55:42 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMjQ7IjA4OjQ1OjEwICI7Mjc1OA=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMjQ7IjA4OjU1OjQyICI7NDsyODc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.10 - dati dall'utente due numeri interi n1 e n2 il programma deve stampare:&#13;&#10;1.tutti i numeri dal pi&#249; piccolo dei due al pi&#249; grande&#13;&#10;dei due&#13;&#10;2.tutti i numeri dal pi&#249; grande dei due al pi&#249; piccolo&#13;&#10;dei due&#13;&#10;3.tutti i numeri da n1 a n2 (comunque siano n1 e n2&#13;&#10;quindi potresti dover andare in ordine crescente o decrescente)&#13;&#10;4.tutti i numeri da n2 a n1 (comunque siano n1 e n2 quindi potresti dover andare in ordine crescente o decrescente)"/>
+            <declare name="n1, n2, min, max, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi il primo numero&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Scrivi il secondo numero&quot;" newline="True"/>
+            <input variable="n2"/>
+            <output expression="&quot;Dal pi&#249; piccolo al pi&#249; grande:&quot;" newline="True"/>
+            <if expression="n1 &lt; n2">
+                <then>
+                    <assign variable="min" expression="n1"/>
+                    <assign variable="max" expression="n2"/>
+                </then>
+                <else>
+                    <assign variable="min" expression="n2"/>
+                    <assign variable="max" expression="n1"/>
+                </else>
+            </if>
+            <for variable="c" start="min" end="max" direction="inc" step="1">
+                <output expression="c" newline="True"/>
+            </for>
+            <output expression="&quot;Dal pi&#249; grande al pi&#249; piccolo:&quot;" newline="True"/>
+            <for variable="c" start="max" end="min" direction="dec" step="1">
+                <output expression="c" newline="True"/>
+            </for>
+            <output expression="&quot;Da &quot; &amp; n1 &amp; &quot; a &quot; &amp; n2" newline="True"/>
+            <if expression="n1 &lt; n2">
+                <then>
+                    <for variable="c" start="n1" end="n2" direction="inc" step="1">
+                        <output expression="c" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="c" start="n1" end="n2" direction="dec" step="1">
+                        <output expression="c" newline="True"/>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;Da &quot; &amp; n2 &amp; &quot; a &quot; &amp; n1" newline="True"/>
+            <if expression="n1 &gt; n2">
+                <then>
+                    <for variable="c" start="n2" end="n1" direction="inc" step="1">
+                        <output expression="c" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="c" start="n2" end="n1" direction="dec" step="1">
+                        <output expression="c" newline="True"/>
+                    </for>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

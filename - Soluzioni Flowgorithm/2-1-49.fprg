@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-28 08:32:02 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA4OjI3OjM0ICI7Mjc2OQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA4OjMyOjAyICI7MjsyODY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.49 - Costruire uno schema di flusso che rappresenti&#13;&#10;l&#8217;algoritmo per il seguente gioco: il computer genera un numero segreto (usa la&#13;&#10;funzione random(100) che genera un numero casuale tra 0 e 99) e il giocatore&#13;&#10;deve individuarlo seguendo le indicazioni fornite dal computer (ti dice se il&#13;&#10;numero da trovare &#232; pi&#249; grande o pi&#249; piccolo di quello che hai provato); una&#13;&#10;volta trovato il numero segreto, il numero di tentativi effettuati &#232;&#13;&#10;visualizzato a video."/>
+            <declare name="segreto, num, ntentativi" type="Integer" array="False" size=""/>
+            <assign variable="ntentativi" expression="0"/>
+            <assign variable="segreto" expression="random(100)"/>
+            <output expression="&quot;Prova ad indovinare il numero (tra 0 e 99)&quot;" newline="True"/>
+            <input variable="num"/>
+            <while expression="num != segreto">
+                <if expression="num &gt; segreto">
+                    <then>
+                        <output expression="&quot;Il numero segreto &#232; minore di &quot; &amp; num" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Il numero segreto &#232; maggiore di &quot; &amp; num" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Prova ad indovinare il numero (tra 0 e 99)&quot;" newline="True"/>
+                <input variable="num"/>
+            </while>
+            <output expression="&quot;Hai indovinato!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

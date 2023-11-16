@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-21 08:20:36 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjA3OjQ4ICI7Mjc2NQ=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjE7IjA4OjIwOjM2ICI7MjsyODY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.32  Dato in input un numero intero n, stabilisci se &#232; primo"/>
+            <declare name="n, c" type="Integer" array="False" size=""/>
+            <declare name="primo" type="Boolean" array="False" size=""/>
+            <do expression="n &lt;= 1">
+                <output expression="&quot;Scrivi un numero maggiore di 1&quot;" newline="True"/>
+                <input variable="n"/>
+            </do>
+            <assign variable="primo" expression="true"/>
+            <for variable="c" start="2" end="n/2" direction="inc" step="1">
+                <if expression="n % c == 0">
+                    <then>
+                        <assign variable="primo" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="primo">
+                <then>
+                    <output expression="n &amp; &quot; &#232; primo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n &amp; &quot; non &#232; primo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

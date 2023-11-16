@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-28 08:48:59 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA4OjQwOjQyICI7Mjc2Mw=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA4OjQ4OjU5ICI7NTsyODkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.56 - Valuta se &#232; pi&#249; probabile ottenere 7 oppure ottenere 8 lanciando 2 dadi da 6 e sommando i 2 valori ottenuti."/>
+            <declare name="lancio, n7, n8, nlanci, c" type="Integer" array="False" size=""/>
+            <declare name="prob7, prob8" type="Real" array="False" size=""/>
+            <assign variable="n7" expression="0"/>
+            <assign variable="n8" expression="0"/>
+            <assign variable="nlanci" expression="10000"/>
+            <for variable="c" start="0" end="nlanci-1" direction="inc" step="1">
+                <assign variable="lancio" expression="(random(6)+1) + (random(6)+1)"/>
+                <if expression="lancio == 7">
+                    <then>
+                        <assign variable="n7" expression="n7 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="lancio == 8">
+                    <then>
+                        <assign variable="n8" expression="n8 + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="prob7" expression="n7 / nlanci"/>
+            <assign variable="prob8" expression="n8 / nlanci"/>
+            <output expression="&quot;Su &quot; &amp; nlanci &amp; &quot; lanci&quot;" newline="True"/>
+            <output expression="&quot;La probabilit&#224; che esca 7 &#232; &quot; &amp; prob7" newline="True"/>
+            <output expression="&quot;La probabilit&#224; che esca 8 &#232; &quot; &amp; prob8" newline="True"/>
+            <if expression="prob7 &gt; prob8">
+                <then>
+                    <output expression="&quot;&#232; pi&#249; probabile che esca 7&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#232; pi&#249; probabile che esca 8&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

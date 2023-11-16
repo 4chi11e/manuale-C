@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-24 08:28:09 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMjQ7IjA4OjE1OjEyICI7Mjc1Nw=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMjQ7IjA4OjI4OjA5ICI7MzsyODc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.9 - Divisione di due numeri interi senza usare l&#8217;operatore&#13;&#10;di divisione&#13;&#10;Variante: stampa anche il resto"/>
+            <declare name="num, den, resto, ris" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi il numeratore&quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="&quot;Scrivi il denominatore&quot;" newline="True"/>
+            <input variable="den"/>
+            <assign variable="ris" expression="0"/>
+            <if expression="den == 0">
+                <then>
+                    <output expression="&quot;&#232; impossibile dividere per 0&quot;" newline="True"/>
+                </then>
+                <else>
+                    <while expression="den * (ris+1) &lt; num">
+                        <assign variable="ris" expression="ris + 1"/>
+                    </while>
+                    <assign variable="resto" expression="num - (den*ris)"/>
+                    <output expression="num &amp; &quot;/&quot; &amp; den &amp; &quot; = &quot; &amp; ris &amp; &quot; resto &quot; &amp; resto" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

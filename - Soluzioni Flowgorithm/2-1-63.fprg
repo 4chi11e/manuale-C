@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-28 09:06:37 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA4OjU4OjUyICI7Mjc3Mw=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjg7IjA5OjA2OjM3ICI7NjsyODgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.63&#9;Dato un numero positivo n disegna le figure geometriche riportate di seguito:&#13;&#10;per n = 5&#13;&#10;"/>
+            <declare name="n, i, j" type="Integer" array="False" size=""/>
+            <declare name="riga" type="String" array="False" size=""/>
+            <do expression="n &lt; 1">
+                <output expression="&quot;scrivi n&quot;" newline="True"/>
+                <input variable="n"/>
+            </do>
+            <assign variable="riga" expression="&quot;&quot;"/>
+            <for variable="i" start="n" end="1" direction="dec" step="1">
+                <for variable="j" start="0" end="n" direction="inc" step="1">
+                    <if expression="j &lt; i">
+                        <then>
+                            <assign variable="riga" expression="riga &amp; &quot;X&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="riga" expression="riga &amp; &quot;   &quot;"/>
+                        </else>
+                    </if>
+                </for>
+                <assign variable="riga" expression="riga &amp; ToChar(13)"/>
+            </for>
+            <output expression="riga" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

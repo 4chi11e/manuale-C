@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-14 08:39:32 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTQ7IjA4OjIxOjIxICI7Mjc1NA=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTQ7IjA4OjM5OjMyICI7NDsyODc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.19 - Progettare un algoritmo che legga da terminale una&#13;&#10;sequenza di interi positivi e negativi fintanto che l&#8217;utente dice di volerne&#13;&#10;inserire ancora, e stampi il prodotto degli interi negativi e la somma dei&#13;&#10;positivi."/>
+            <declare name="num, prod, somma, risp" type="Integer" array="False" size=""/>
+            <assign variable="prod" expression="1"/>
+            <assign variable="somma" expression="0"/>
+            <output expression="&quot;vuoi inserire un numero (1: s&#236;, 0: no)&quot;" newline="True"/>
+            <input variable="risp"/>
+            <while expression="risp != 0 &amp;&amp; risp != 1">
+                <output expression="&quot;Risposta non prevista. Vuoi inserire un numero (1: s&#236;, 0: no)&quot;" newline="True"/>
+                <input variable="risp"/>
+            </while>
+            <while expression="risp == 1">
+                <output expression="&quot;scrivi un numero intero&quot;" newline="True"/>
+                <input variable="num"/>
+                <if expression="num &gt;= 0">
+                    <then>
+                        <assign variable="somma" expression="somma + num"/>
+                    </then>
+                    <else>
+                        <assign variable="prod" expression="prod * num"/>
+                    </else>
+                </if>
+                <output expression="&quot;vuoi inserire un altro numero (1: s&#236;, 0: no)&quot;" newline="True"/>
+                <input variable="risp"/>
+                <while expression="risp != 0 &amp;&amp; risp != 1">
+                    <output expression="&quot;Risposta non prevista. Vuoi inserire un altro numero (1: s&#236;, 0: no)&quot;" newline="True"/>
+                    <input variable="risp"/>
+                </while>
+            </while>
+            <output expression="&quot;somma: &quot; &amp; somma" newline="True"/>
+            <output expression="&quot;prodotto: &quot; &amp; prod" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

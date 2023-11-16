@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-14 08:55:36 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTQ7IjA4OjQxOjAwICI7Mjc1Mw=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMTQ7IjA4OjU1OjM2ICI7NTsyODc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.23 - Dati due&#13;&#10;numeri in input b ed e, calcola e scrivi b^e utilizzando solo moltiplicazioni."/>
+            <declare name="base, esp, c" type="Integer" array="False" size=""/>
+            <declare name="ris" type="Real" array="False" size=""/>
+            <output expression="&quot;scrivi la base&quot;" newline="True"/>
+            <input variable="base"/>
+            <output expression="&quot;scrivi l'esponente&quot;" newline="True"/>
+            <input variable="esp"/>
+            <if expression="base == 0">
+                <then>
+                    <if expression="esp == 0">
+                        <then>
+                            <output expression="&quot;Non &#232; possibile calcolare 0^0&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="base &amp; &quot;^&quot; &amp; esp &amp; &quot; = 0&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="ris" expression="1"/>
+                    <if expression="esp &gt;= 0">
+                        <then>
+                            <for variable="c" start="0" end="esp-1" direction="inc" step="1">
+                                <assign variable="ris" expression="ris * base"/>
+                            </for>
+                            <output expression="base &amp; &quot;^&quot; &amp; esp &amp; &quot; = &quot; &amp; ris" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="esp" expression="-esp"/>
+                            <for variable="c" start="0" end="esp-1" direction="inc" step="1">
+                                <assign variable="ris" expression="ris / base"/>
+                            </for>
+                            <output expression="base &amp; &quot;^&quot; &amp; esp &amp; &quot; = &quot; &amp; ris" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

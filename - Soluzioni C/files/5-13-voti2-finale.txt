@@ -1,0 +1,24 @@
+Amici: 7.33
+Biella: 8.17
+Brescia: 7.17
+Carolla: 8.00
+Cunegatti: 7.00
+De Bella: 4.38
+De Vecchi: 8.00
+Fumagalli: 6.33
+Galimberti: 9.00
+Germanò: 8.33
+Gubellini: 8.33
+Lepore: 4.38
+Maconi: 6.25
+Mariani: 7.67
+Mattavelli: 9.00
+Oggiano: 3.25
+Passoni: 6.13
+Pastori: 4.38
+Pirovano: 7.17
+Rudi: 9.83
+Russell: 6.00
+Sogos: 3.25
+Tezza: 6.00
+Varisco: 8.50

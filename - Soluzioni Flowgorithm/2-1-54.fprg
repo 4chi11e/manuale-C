@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-02 01:27:01 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDI7IjAxOjE3OjQzICI7Mjc1NA=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDMtMDI7IjAxOjI3OjAxICI7MjsyODU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.54 - Dati in&#13;&#10;ingresso due numeri positivi x e y, visualizza in ordine decrescente la&#13;&#10;sequenza di numeri interi compresi tra x e y che sono divisibili per il minore&#13;&#10;tra x e y. Ad esempio, se x = 7 e y = 35, la sequenza &#232; 35 28 21 14 7."/>
+            <declare name="x, y, min, max, i" type="Integer" array="False" size=""/>
+            <do expression="x &lt;= 0">
+                <output expression="&quot;Scrivi il primo numero, deve essere positivo&quot;" newline="True"/>
+                <input variable="x"/>
+            </do>
+            <do expression="y &lt;= 0">
+                <output expression="&quot;Scrivi il secondo numero, deve essere positivo&quot;" newline="True"/>
+                <input variable="y"/>
+            </do>
+            <if expression="x &gt; y">
+                <then>
+                    <assign variable="max" expression="x"/>
+                    <assign variable="min" expression="y"/>
+                </then>
+                <else>
+                    <assign variable="max" expression="y"/>
+                    <assign variable="min" expression="x"/>
+                </else>
+            </if>
+            <for variable="i" start="max" end="min" direction="dec" step="1">
+                <if expression="i % min == 0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

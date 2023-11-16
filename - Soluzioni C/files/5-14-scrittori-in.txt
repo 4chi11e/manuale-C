@@ -1,0 +1,25 @@
+Divina Commedia;Dante Alighieri;1321
+Promessi Sposi;Alessandro Manzoni;1840
+Il Decamerone;Alessandro Boccaccio;1350
+L'Orlando Furioso;Ludovico Ariosto;1516
+Il fu Mattia Pascal;Luigi Pirandello;1904
+Ultime lettere di Jacopo Ortis;Ugo Foscolo;1802
+Se questo è un uomo;Primo Levi;1947
+Il barone rampante;Italo Calvino;1957
+I Malavoglia;Giovanni Verga;1881
+Il Principe; Niccolò Macchiavelli;1532
+La Gerusalemme Liberata;Torquato Tasso;1581
+Cuore;Edmondo De Amicis;1886
+Il deserto dei Tartari;Dino Buzzati;1940
+La coscienza di Zeno;Italo Svevo;1923
+Pinocchio;Carlo Collodi;1883
+Il piacere;Gabriele D'Annunzio;1889
+Myricae;Giovanni Pascoli;1891
+Canti;Giacomo Leopardi;1831
+Uno, nessuno e centomila;Luigi Pirandello;1926
+Il nome della rosa;Umberto Eco;1980
+La casa in collina;Cesare Pavese;1948
+Il gattopardo;Giuseppe Tomasi di Lampedusa;1958
+I Vicerè;Federico De Roberto;1894
+Mastro don Gesualdo;Giovanni Verga;1889
+

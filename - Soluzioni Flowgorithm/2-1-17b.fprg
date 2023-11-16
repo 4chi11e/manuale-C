@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-09 01:58:33 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMDk7IjAxOjU1OjAxICI7Mjc1Ng=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMDk7IjAxOjU4OjMzICI7MzsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.17 - Letto un&#13;&#10;numero intero positivo n stampare il fattoriale: n! = 1 &#183; 2 &#183; 3 &#183; . . . &#183;n"/>
+            <declare name="n, f, i" type="Integer" array="False" size=""/>
+            <do expression="n &lt; 0">
+                <output expression="&quot;Scrivi un numero &gt;= 0&quot;" newline="True"/>
+                <input variable="n"/>
+            </do>
+            <assign variable="f" expression="1"/>
+            <for variable="i" start="n" end="1" direction="dec" step="1">
+                <assign variable="f" expression="f * i"/>
+            </for>
+            <output expression="&quot;f(&quot;&amp;n&amp;&quot;) = &quot;&amp;f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

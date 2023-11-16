@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-19 01:43:29 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMTk7IjAxOjMyOjIyICI7Mjc1NA=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDEtMTk7IjAxOjQzOjI5ICI7MTsyODcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi un numero positivo&quot;" newline="True"/>
+            <input variable="num"/>
+            <for variable="c" start="1" end="num" direction="inc" step="1">
+                <if expression="c % 2 == 0">
+                    <then>
+                        <output expression="c" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

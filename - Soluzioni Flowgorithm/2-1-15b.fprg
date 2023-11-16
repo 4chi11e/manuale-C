@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-09 01:36:54 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMDk7IjAxOjE1OjU0ICI7Mjc2MA=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMDk7IjAxOjM2OjU0ICI7NDsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.15 - Con un&#13;&#10;opportuno ciclo chiedere all&#8217;utente di inserire due numeri n1 e n2 compresi tra&#13;&#10;1 e 100. Se i numeri non fossero corretti, rimanere nel ciclo e ripetere la&#13;&#10;richiesta. Stampare quanti sono i numeri pari compresi tra i due numeri"/>
+            <declare name="n1, n2, c, i, min, max" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi il primo numero (compreso tra 1 e 100)&quot;" newline="True"/>
+            <input variable="n1"/>
+            <while expression="n1 &lt; 1 || n1 &gt; 100">
+                <output expression="&quot;Valore non valido. Scrivi il primo numero (compreso tra 1 e 100)&quot;" newline="True"/>
+                <input variable="n1"/>
+            </while>
+            <output expression="&quot;Scrivi il secondo numero (compreso tra 1 e 100)&quot;" newline="True"/>
+            <input variable="n2"/>
+            <while expression="n2 &lt; 1 || n2 &gt; 100">
+                <output expression="&quot;Valore non valido. Scrivi il secondo numero (compreso tra 1 e 100)&quot;" newline="True"/>
+                <input variable="n2"/>
+            </while>
+            <if expression="n1 &lt; n2">
+                <then>
+                    <assign variable="min" expression="n1"/>
+                    <assign variable="max" expression="n2"/>
+                </then>
+                <else>
+                    <assign variable="min" expression="n2"/>
+                    <assign variable="max" expression="n1"/>
+                </else>
+            </if>
+            <assign variable="c" expression="0"/>
+            <if expression="min % 2 == 1">
+                <then>
+                    <assign variable="min" expression="min + 1"/>
+                </then>
+                <else/>
+            </if>
+            <for variable="i" start="min" end="max" direction="inc" step="2">
+                <assign variable="c" expression="c+1"/>
+            </for>
+            <output expression="c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

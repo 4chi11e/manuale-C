@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="franc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-23 01:50:39 "/>
+        <attribute name="created" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjM7IjAxOjQzOjIzICI7Mjc1Mw=="/>
+        <attribute name="edited" value="ZnJhbmM7TEFQVE9QLVNJN1YwQU01OzIwMjMtMDItMjM7IjAxOjUwOjM5ICI7MjsyODY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.1.45 - Dati tre numeri positivi verificare che questi tre&#13;&#10;numeri siano una terna pitagorica ( una terna pitagorica &#232; un insieme di 3&#13;&#10;numeri per cui la somma del quadrato di due numeri sia uguale al quadrato del&#13;&#10;terzo numero, in altre parole sono le lunghezze dei lati di un triangolo&#13;&#10;rettangolo)"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Scrivi il primo numero&quot;" newline="True"/>
+            <input variable="a"/>
+            <while expression="a &lt;= 0">
+                <output expression="&quot;Riscrivi il primo numero, deve essere positivo&quot;" newline="True"/>
+                <input variable="a"/>
+            </while>
+            <output expression="&quot;Scrivi il secondo numero&quot;" newline="True"/>
+            <input variable="b"/>
+            <while expression="b &lt;= 0">
+                <output expression="&quot;Riscrivi il secondo numero, deve essere positivo&quot;" newline="True"/>
+                <input variable="b"/>
+            </while>
+            <output expression="&quot;Scrivi il terzo numero&quot;" newline="True"/>
+            <input variable="c"/>
+            <while expression="c &lt;= 0">
+                <output expression="&quot;Riscrivi il terzo numero, deve essere positivo&quot;" newline="True"/>
+                <input variable="c"/>
+            </while>
+            <if expression="a*a = b*b + c*c or a*a + b*b = c*c or a*a + c*c = b*b">
+                <then>
+                    <output expression="&quot;Sono una terna pitagorica&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Non sono una terna pitagorica&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
